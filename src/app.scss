@@ -1,3 +1,35 @@
+@use "variables" as *;
+@use "reset" as *;
+@use "mixins" as *;
+@use "utils" as *;
+
+* {
+    color: #fff;
+    font-family: $primary-font;
+}
+
 body {
-    background-color: red;
+    min-height: 100vh;
+    width: 100%;
+    background-color: $primary-100;
+}
+
+.navbar {
+    height: 72px;
+    @include flexbox(row, space-between, center);
+
+    &__nav-links,
+    &__social-links {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        > * {
+            list-style: none;
+        }
+    }
+
+    &__nav-links > * {
+        color: $primary-400;
+    }
 }
