@@ -5,10 +5,11 @@
     align-items: $y-alignment;
 }
 
-@mixin flex-center($x-direction, $y-direction, $height, $width) {
+@mixin flex-center($direction, $height, $width) {
     display: flex;
+    flex-direction: $direction;
     justify-content: center;
     align-items: center;
-    height: $height;
+    min-height: $height;
     width: $width;
 }

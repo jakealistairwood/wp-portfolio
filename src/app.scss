@@ -2,10 +2,13 @@
 @use "reset" as *;
 @use "mixins" as *;
 @use "utils" as *;
+@use "typography" as *;
+@use "buttons" as *;
 
 * {
     color: #fff;
     font-family: $primary-font;
+    margin: 0;
 }
 
 body {
@@ -31,5 +34,53 @@ body {
 
     &__nav-links > * {
         color: $primary-400;
+    }
+}
+
+.hero {
+    @include flex-center(column, calc(100vh - 72px), 100%);
+    text-align: center;
+    position: relative;
+
+    &__main-heading {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        color: $primary-400;
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    &__planet {
+        border-radius: 50%;
+        position: absolute;
+
+        &--one {
+            top: 15vh;
+            left: 16vw;
+            height: 30px;
+            width: 30px;
+            background-image: linear-gradient(0deg, #a18cd1, #fbc2eb);
+        }
+
+        &--two {
+            top: 10vh;
+            right: 20vw;
+            height: 40px;
+            width: 40px;
+            background-image: linear-gradient(120deg, #84fab0, #8fd3f4);
+        }
+
+        &--three {
+            top: 27vh;
+            right: 10vw;
+            height: 70px;
+            width: 70px;
+            background-image: linear-gradient(120deg, #f6d365, #fda085);
+        }
     }
 }

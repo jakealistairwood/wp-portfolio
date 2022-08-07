@@ -39,10 +39,16 @@
             </li>
         </ul>
     </nav>
-    <header class="hero">
-        <h1>
+    <header class="hero container">
+        <h1 class="hero__main-heading">
             <span>Hello. I'm Jake.</span>
             <span>A Web Developer.</span>
         </h1>
-        <p>Who loves nothing more than designing and developing beautiful, engaging websites and applications.</p>
+        <p class="hero__description">Who loves nothing more than designing and developing beautiful, engaging websites and applications.</p>
+        <a href="">
+            <button class="hero__btn primary-btn">View My Work</button>
+        </a>
+        <div class="hero__planet hero__planet--one"></div>
+        <div class="hero__planet hero__planet--two"></div>
+        <div class="hero__planet hero__planet--three"></div>
     </header>

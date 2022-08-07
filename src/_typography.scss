@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+h1 {
+    font-size: $fs-lg;
+    font-weight: 900;
+    line-height: 120%;
+}
