@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Jake Wood | Front-End Developer</title>
     <?php wp_head(); ?>
 </head>
+
 <body>
     <nav class="navbar container">
         <a href="">
@@ -29,7 +31,8 @@
         <ul role="list" class="navbar__social-links">
             <li class="navbar__social-link">
                 <a href="#">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/linkedin.svg" alt="linkedin logo">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/linkedin.svg"
+                        alt="linkedin logo">
                 </a>
             </li>
             <li class="navbar__social-link">
@@ -44,7 +47,8 @@
             <span>Hello. I'm Jake.</span>
             <span>A Web Developer.</span>
         </h1>
-        <p class="hero__description">Who loves nothing more than designing and developing beautiful, engaging websites and applications.</p>
+        <p class="hero__description">Who loves nothing more than designing and developing beautiful, engaging websites
+            and applications.</p>
         <a href="#portfolio-projects">
             <button class="hero__btn primary-btn">View My Work</button>
         </a>

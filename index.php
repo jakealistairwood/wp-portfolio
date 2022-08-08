@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <section class="portfolio container" id="portfolio-projects">
+    <h2 class="section-header">Portfolio</h2>
     <div class="tabs">
-        <button class="tab tab--development active">Development</button>
+        <button class="tab tab--development">Development</button>
         <span>/</span>
         <button class="tab tab--design">Design</button>
     </div>
@@ -9,6 +10,7 @@
         $args = array ( 
             'category_name' => 'development',
         );
+
         $the_query = new WP_Query($args);
         if(have_posts()) {
         while($the_query -> have_posts()) {
@@ -23,16 +25,17 @@
                         $post_tags = get_the_tags();
                         if($post_tags) {
                             foreach($post_tags as $tag) { ?>
-                                <span class="project__tag skill-tag">
-                                    <?php echo $tag -> name; ?>
-                                </span>
-                            <?php }
+                    <span class="project__tag skill-tag">
+                        <?php echo $tag -> name; ?>
+                    </span>
+                    <?php }
                         } 
                     ?>
                 </div>
                 <div class="project__links">
                     <a href="">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/eye.jpg" alt="preview icon" />
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/eye.jpg"
+                            alt="preview icon" />
                         <span>Preview</span>
                     </a>
                     <a href="">
@@ -43,7 +46,8 @@
             </div>
         </div>
         <a class=" project__img" href="">
-            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>">
+            <img src="<?php echo get_the_post_thumbnail_url(); ?>"
+                alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>">
         </a>
     </div>
     <?php }

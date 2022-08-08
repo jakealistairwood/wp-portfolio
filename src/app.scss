@@ -86,6 +86,8 @@ body {
 }
 
 .portfolio {
+    padding-bottom: 10rem;
+
     .project {
         display: flex;
         padding-block: 2rem;
@@ -107,11 +109,12 @@ body {
 
         &__description {
             width: 60%;
+            margin-bottom: 2rem;
         }
 
         &__add-info {
             @include flexbox(row, space-between, center);
-            margin-top: auto;
+            flex-wrap: wrap;
         }
 
         &__links {
@@ -135,5 +138,33 @@ body {
         &__img {
             width: 30%;
         }
+    }
+}
+
+.contact {
+    @include flex-center(column, 30vh, 100%);
+    row-gap: 2rem;
+    background-color: $primary-300;
+
+    &__email {
+        color: $accent-color;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    &__icon {
+        @include flex-center(row, 45px, 45px);
+        background-color: $accent-color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__copyright {
+        color: #727272;
     }
 }

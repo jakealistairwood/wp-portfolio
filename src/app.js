@@ -1,8 +1,6 @@
 const designTab = document.querySelector(".tab--design");
 const developmentTab = document.querySelector(".tab--development");
 
-console.log(designTab);
-
 const renderProjects = (btnActivated, btnDisabled) => {
     btnActivated.classList.remove("active");
     btnDisabled.classList.remove("active");

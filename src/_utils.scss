@@ -1,5 +1,24 @@
+@use "variables" as *;
+
 .container {
     max-width: 1440px;
     width: 90%;
     margin: 0 auto;
+}
+
+.section-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 120px;
+        background-color: $accent-color;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

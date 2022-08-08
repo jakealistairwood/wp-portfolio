@@ -10,28 +10,21 @@ function enqueue_scripts() {
     wp_enqueue_script('app');
 }
 
+function create_project_post_type() {
+    register_post_type('project', array(
+        'public' => true,
+        'show_in_menu' => true,
+        'labels' => array(
+            'name' => 'Projects'
+        ),
+        'menu_icon' => 'dashicons-media-code'
+    ))
+}
+
 add_action('wp_enqueue_scripts', 'enqueue_styles'); 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
+add_action('init', 'create_project_post_type');
 ?>
 
 
 
-
-<?php
-    $argsDevelopment = array ( 
-        'category_name' => 'development',
-    );
-
-    $argsDesign = array ( 
-        'category_name' => 'design'
-    )
-
-    if(class_exists("tab--design active", true)) {
-        $the_query = new WP_Query($argsDesign);
-        if(have_posts()) {
-            while($the_query -> have_posts()) {
-                $the_query -> the_post(); ?>
-            <?php }
-        }
-    } ?>
-?>;

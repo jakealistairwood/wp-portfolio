@@ -9,7 +9,6 @@
 
 var designTab = document.querySelector(".tab--design");
 var developmentTab = document.querySelector(".tab--development");
-console.log(designTab);
 
 var renderProjects = function renderProjects(btnActivated, btnDisabled) {
   btnActivated.classList.remove("active");
