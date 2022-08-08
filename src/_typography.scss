@@ -5,3 +5,14 @@ h1 {
     font-weight: 900;
     line-height: 120%;
 }
+
+h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+p {
+    color: $primary-400;
+    font-size: $fs-rg;
+}

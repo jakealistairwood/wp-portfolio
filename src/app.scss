@@ -84,3 +84,56 @@ body {
         }
     }
 }
+
+.portfolio {
+    .project {
+        display: flex;
+        padding-block: 2rem;
+        border-top: 1px solid #59586f;
+        border-bottom: 1px solid #59586f;
+        width: 85%;
+        margin-inline: auto;
+
+        &__title {
+            padding-bottom: 1rem;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 60%;
+        }
+
+        &__description {
+            width: 60%;
+        }
+
+        &__add-info {
+            @include flexbox(row, space-between, center);
+            margin-top: auto;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+            padding-right: 4rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                column-gap: 0.5rem;
+            }
+        }
+
+        &__lang-tags {
+            display: flex;
+            column-gap: 1rem;
+        }
+
+        &__img {
+            width: 30%;
+        }
+    }
+}

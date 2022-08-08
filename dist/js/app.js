@@ -7,7 +7,22 @@
   \********************/
 /***/ (() => {
 
+var designTab = document.querySelector(".tab--design");
+var developmentTab = document.querySelector(".tab--development");
+console.log(designTab);
 
+var renderProjects = function renderProjects(btnActivated, btnDisabled) {
+  btnActivated.classList.remove("active");
+  btnDisabled.classList.remove("active");
+  btnActivated.classList.add("active");
+};
+
+developmentTab.addEventListener("click", function () {
+  renderProjects(developmentTab, designTab);
+});
+designTab.addEventListener("click", function () {
+  renderProjects(designTab, developmentTab);
+});
 
 /***/ }),
 
