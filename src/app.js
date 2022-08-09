@@ -1,16 +1,16 @@
 const designTab = document.querySelector(".tab--design");
 const developmentTab = document.querySelector(".tab--development");
 
-const renderProjects = (btnActivated, btnDisabled) => {
+const activateTab = (btnActivated, btnDisabled) => {
     btnActivated.classList.remove("active");
     btnDisabled.classList.remove("active");
     btnActivated.classList.add("active");
 };
 
 developmentTab.addEventListener("click", () => {
-    renderProjects(developmentTab, designTab);
+    activateTab(developmentTab, designTab);
 });
 
 designTab.addEventListener("click", () => {
-    renderProjects(designTab, developmentTab);
+    activateTab(designTab, developmentTab);
 });

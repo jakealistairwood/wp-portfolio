@@ -18,7 +18,7 @@ function create_project_post_type() {
             'name' => 'Projects'
         ),
         'menu_icon' => 'dashicons-media-code'
-    ))
+    ));
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_styles'); 

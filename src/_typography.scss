@@ -17,6 +17,12 @@ h3 {
     text-transform: uppercase;
 }
 
+h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $accent-color;
+}
+
 p {
     color: $primary-400;
     font-size: $fs-rg;

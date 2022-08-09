@@ -113,6 +113,12 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsl(13deg, 97%, 76%);
+}
+
 p {
   color: hsl(215deg, 30%, 78%);
   font-size: 1rem;
@@ -126,11 +132,34 @@ p {
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 700;
+  transition: 0.3s ease;
+}
+.primary-btn:hover {
+  background-color: #353d46;
 }
 
 .skill-tag {
   background-color: hsl(243deg, 12%, 39%);
   padding: 0.5rem 1rem;
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  color: #59586f;
+  transition: 0.3s ease;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 2px dotted transparent;
+  padding: 0;
+}
+.tab:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.tab.active {
+  color: hsl(0deg, 0%, 100%);
+  border-bottom: 2px dotted hsl(0deg, 0%, 100%);
 }
 
 * {
@@ -163,6 +192,10 @@ body {
 }
 .navbar__nav-links > * {
   color: hsl(215deg, 30%, 78%);
+  transition: 0.3s ease;
+}
+.navbar__nav-links > *:hover {
+  color: hsl(0deg, 0%, 100%);
 }
 
 .hero {
@@ -215,6 +248,16 @@ body {
 .portfolio {
   padding-bottom: 10rem;
 }
+.portfolio .featured {
+  padding-block: 10rem;
+}
+.portfolio .featured__content {
+  background-image: linear-gradient(90deg, #151c27, rgba(21, 28, 39, 0));
+}
+.portfolio .tabs {
+  margin: 10vh auto;
+  text-align: center;
+}
 .portfolio .project {
   display: flex;
   padding-block: 2rem;
@@ -222,6 +265,11 @@ body {
   border-bottom: 1px solid #59586f;
   width: 85%;
   margin-inline: auto;
+}
+@media screen and (max-width: 768px) {
+  .portfolio .project {
+    flex-direction: column;
+  }
 }
 .portfolio .project__title {
   padding-bottom: 1rem;
@@ -232,9 +280,19 @@ body {
   flex-grow: 1;
   width: 60%;
 }
+@media screen and (max-width: 768px) {
+  .portfolio .project__content {
+    width: 100%;
+  }
+}
 .portfolio .project__description {
   width: 60%;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .portfolio .project__description {
+    width: 100%;
+  }
 }
 .portfolio .project__add-info {
   display: flex;
@@ -250,6 +308,11 @@ body {
        column-gap: 1rem;
   padding-right: 4rem;
 }
+@media screen and (max-width: 768px) {
+  .portfolio .project__links {
+    padding-right: 0;
+  }
+}
 .portfolio .project__links a {
   display: flex;
   align-items: center;
@@ -263,6 +326,12 @@ body {
 }
 .portfolio .project__img {
   width: 30%;
+}
+@media screen and (max-width: 768px) {
+  .portfolio .project__img {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 
 .contact {

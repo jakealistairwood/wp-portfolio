@@ -10,17 +10,17 @@
 var designTab = document.querySelector(".tab--design");
 var developmentTab = document.querySelector(".tab--development");
 
-var renderProjects = function renderProjects(btnActivated, btnDisabled) {
+var activateTab = function activateTab(btnActivated, btnDisabled) {
   btnActivated.classList.remove("active");
   btnDisabled.classList.remove("active");
   btnActivated.classList.add("active");
 };
 
 developmentTab.addEventListener("click", function () {
-  renderProjects(developmentTab, designTab);
+  activateTab(developmentTab, designTab);
 });
 designTab.addEventListener("click", function () {
-  renderProjects(designTab, developmentTab);
+  activateTab(designTab, developmentTab);
 });
 
 /***/ }),

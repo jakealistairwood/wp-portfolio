@@ -7,9 +7,34 @@
     border-radius: 6px;
     font-size: $fs-rg;
     font-weight: 700;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: #353d46;
+    }
 }
 
 .skill-tag {
     background-color: $primary-350;
     padding: 0.5rem 1rem;
+}
+
+.tab {
+    background-color: transparent;
+    border: none;
+    color: #59586f;
+    transition: 0.3s ease;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px dotted transparent;
+    padding: 0;
+
+    &:hover {
+        color: $primary-900;
+    }
+}
+
+.tab.active {
+    color: $primary-900;
+    border-bottom: 2px dotted $primary-900;
 }
